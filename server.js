@@ -18,6 +18,8 @@ app.use("/api", routes);
 //io request
 io.on("connection", (socket) => {
   console.log("a user connected", socket.id);
+  const number = randomInt(0, 100);
+  console.log(number);
   socket.on("message from the frontend:", (message) => {
     console.log("message from the frontend:", message);
   });
